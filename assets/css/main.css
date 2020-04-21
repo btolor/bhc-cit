@@ -350,7 +350,9 @@ main .top .grid .promise .enroll a {
   background: #009639;
   color: white;
   padding: 16px 42px;
-  font-size: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
@@ -442,10 +444,10 @@ main .slogan .grid {
 main .slogan .grid p {
   color: white;
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 28px;
   font-style: italic;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 @media screen and (max-width: 950px) {
@@ -487,6 +489,18 @@ main .slogan .grid #hr {
 
 main .bottom .grid {
   padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .bottom .grid .col .card {
+  border-color: #009639;
+  border-radius: 8px;
 }
 
 main .bottom .grid .col .card .title {
@@ -506,16 +520,247 @@ main .bottom .grid .col .card .title h3 {
 main .bottom .grid .col .card .info {
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main .bottom .grid .col .card .info img {
   width: 85%;
+  margin: 0 auto;
   padding-bottom: 26px;
+}
+
+main .bottom .grid .col .card .info h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  color: #009639;
+  font-weight: 600;
+  -webkit-text-decoration: underline #009639;
+          text-decoration: underline #009639;
 }
 
 main .bottom .grid .col .card .info p {
   width: 85%;
   margin: 0 auto;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  color: #373d3f;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+}
+
+main .bottom .grid .col .card .info .graph {
+  padding-top: 6px;
+}
+
+main .bottom .grid .col .card .info .graph .high {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 4px 28px;
+}
+
+main .bottom .grid .col .card .info .graph .high .bracket {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 12px;
+  font-style: italic;
+}
+
+main .bottom .grid .col .card .info .graph .high .bars {
+  width: 100%;
+  padding: 0 8px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .bottom .grid .col .card .info .graph .high .bars .us {
+  border: 10px solid #97D700;
+  width: 95%;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+main .bottom .grid .col .card .info .graph .high .bars .tx {
+  border: 10px solid #009639;
+  width: 90%;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main .bottom .grid .col .card .info .graph .high .numbers span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 14px;
+}
+
+main .bottom .grid .col .card .info .graph .med {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 4px 28px;
+}
+
+main .bottom .grid .col .card .info .graph .med .bracket {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 12px;
+  font-style: italic;
+}
+
+main .bottom .grid .col .card .info .graph .med .bars {
+  width: 100%;
+  padding: 0 8px;
+  padding-left: 11px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .bottom .grid .col .card .info .graph .med .bars .us {
+  border: 10px solid #97D700;
+  width: 50%;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+main .bottom .grid .col .card .info .graph .med .bars .tx {
+  border: 10px solid #009639;
+  width: 55%;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main .bottom .grid .col .card .info .graph .med .numbers span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 14px;
+}
+
+main .bottom .grid .col .card .info .graph .low {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 4px 28px;
+}
+
+main .bottom .grid .col .card .info .graph .low .bracket {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 12px;
+  font-style: italic;
+}
+
+main .bottom .grid .col .card .info .graph .low .bars {
+  width: 100%;
+  padding: 0 8px;
+  padding-left: 11px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .bottom .grid .col .card .info .graph .low .bars .us {
+  border: 10px solid #97D700;
+  width: 25%;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+main .bottom .grid .col .card .info .graph .low .bars .tx {
+  border: 10px solid #009639;
+  width: 30%;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+main .bottom .grid .col .card .info .graph .low .numbers span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 14px;
+}
+
+main .bottom .grid .col .card .info .graph .region {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .bottom .grid .col .card .info .graph .region .area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .bottom .grid .col .card .info a {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: #009639;
+  color: white;
+  width: 35%;
+  margin: 0 auto;
+  padding: 10px 0;
+  margin-top: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 4px;
+}
+
+main .bottom .grid .col .card .info a:hover {
+  color: #97D700;
 }
 
 /* Footer Styles... */

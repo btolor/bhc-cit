@@ -178,7 +178,9 @@ main
                         background: $dark-green
                         color: white
                         padding: 16px 42px
-                        font-size: $text-font 
+                        font-family: $text-font 
+                        font-size: 18px
+                        letter-spacing: 1px
                         font-weight: 700 
                         font-style: italic
                         text-transform: uppercase
@@ -219,10 +221,10 @@ main
             p 
                 color: white
                 margin-bottom: 0
-                font-weight: 600
+                font-weight: 500
                 font-size: 28px
                 font-style: italic
-                font-family: $text-font
+                font-family: 'Times New Roman', Times, serif
                 +media-max(950px)
                     font-size: 22px
                 +media-max(768px)
@@ -242,8 +244,11 @@ main
     .bottom 
         .grid 
             padding: 60px 0
+            +flex(flex, row)
             .col 
                 .card 
+                    border-color: $dark-green
+                    border-radius: 8px
                     .title 
                         background: $dark-green 
                         color: white
@@ -257,11 +262,144 @@ main
                     .info 
                         text-align: center
                         padding-top: 30px
+                        padding-bottom: 40px
+                        +flex(flex,column)
                         img 
-                            width: 85%
+                            +center(85%, 0 auto)
                             padding-bottom: 26px
+                        h6 
+                            font-family: $text-font 
+                            font-size: 20px
+                            color: $dark-green
+                            font-weight: 600
+                            text-decoration: underline $dark-green
                         p 
                             +center(85%,0 auto)
+                            text-align: left
+                            font-family: $text-font 
+                            font-size: 18px
+                            color: $text-color
+                            margin-bottom: 0
+                            padding-bottom: 8px
+                        // Graph Styles...
+                        .graph 
+                            padding-top: 6px 
+                            .high 
+                                +flex(flex,row)
+                                padding: 4px 28px
+                                .bracket
+                                    align-self: center
+                                    text-transform: uppercase
+                                    font-family: $text-font
+                                    color: $text-color
+                                    font-size: 12px
+                                    font-style: italic
+                                .bars 
+                                    width: 100% 
+                                    padding: 0 8px
+                                    align-self: center
+                                    .us
+                                        border: 10px solid $light-green 
+                                        width: 95%
+                                        margin-bottom: 0
+                                        margin-top: 0
+                                        margin-left: 0
+                                    .tx
+                                        border: 10px solid $dark-green 
+                                        width: 90%
+                                        margin-left: 0
+                                        margin-bottom: 0
+                                        margin-top: 0
+                                .numbers
+                                    span 
+                                        font-family: $text-font
+                                        color: $text-color
+                                        font-size: 14px
+                            .med 
+                                +flex(flex,row)
+                                padding: 4px 28px
+                                .bracket
+                                    align-self: center
+                                    text-transform: uppercase
+                                    font-family: $text-font
+                                    color: $text-color
+                                    font-size: 12px
+                                    font-style: italic
+                                .bars 
+                                    width: 100% 
+                                    padding: 0 8px
+                                    padding-left: 11px
+                                    align-self: center
+                                    .us
+                                        border: 10px solid $light-green 
+                                        width: 50%
+                                        margin-bottom: 0
+                                        margin-top: 0
+                                        margin-left: 0
+                                    .tx
+                                        border: 10px solid $dark-green 
+                                        width: 55%
+                                        margin-left: 0
+                                        margin-bottom: 0
+                                        margin-top: 0
+                                .numbers
+                                    span 
+                                        font-family: $text-font
+                                        color: $text-color
+                                        font-size: 14px
+                            .low 
+                                +flex(flex,row)
+                                padding: 4px 28px
+                                .bracket
+                                    align-self: center
+                                    text-transform: uppercase
+                                    font-family: $text-font
+                                    color: $text-color
+                                    font-size: 12px
+                                    font-style: italic
+                                .bars 
+                                    width: 100% 
+                                    padding: 0 8px
+                                    padding-left: 11px
+                                    align-self: center
+                                    .us
+                                        border: 10px solid $light-green 
+                                        width: 25%
+                                        margin-bottom: 0
+                                        margin-top: 0
+                                        margin-left: 0
+                                    .tx
+                                        border: 10px solid $dark-green 
+                                        width: 30%
+                                        margin-left: 0
+                                        margin-bottom: 0
+                                        margin-top: 0
+                                .numbers
+                                    span 
+                                        font-family: $text-font
+                                        color: $text-color
+                                        font-size: 14px
+                            .region
+                                +fullFlex(flex,row,space-between)
+                                .area
+                                    +flex(flex,row)
+                        a 
+                            align-self: flex-end
+                            background: $dark-green
+                            color: white
+                            +center(35%,0 auto)
+                            padding: 10px 0
+                            margin-top: 10px
+                            font-family: $text-font 
+                            font-weight: 700 
+                            font-size: 16px
+                            text-transform: uppercase
+                            transition: .3s
+                            border-radius: 4px
+                            &:hover
+                                color: $light-green
+
+                            
 
 
 
