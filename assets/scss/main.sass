@@ -463,12 +463,35 @@ main
     // Location Secion...
     .location
         .grid
+            +fullFlex(flex,row,center) 
             .address 
+                +flex(flex,column)
+                align-self: center
                 .street
+                    padding-bottom: 20px
                     a
-                        +flex(flex,row)    
+                        color: $dark-green
+                        +flex(flex,row) 
+                        .icon 
+                            align-self: center
+                            .fa 
+                                font-size: 56px  
+                        .content
+                            p 
+                                margin-bottom: 0 
+                                font-size: 28px  
                 .number
-                    +flex(flex,row)                       
+                    +flex(flex,row)   
+                    .icon 
+                        align-self: center
+                        .fa 
+                            font-size: 56px  
+                            color: $dark-green
+                    .content
+                        p 
+                            margin-bottom: 0  
+                            color: $dark-green   
+                            font-size: 28px                  
 
 
 

@@ -859,7 +859,7 @@ main .bottom .grid .col .card .info .bhc-btn {
   margin-top: 2px;
 }
 
-main .location .grid .address .street a {
+main .location .grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -867,6 +867,51 @@ main .location .grid .address .street a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .location .grid .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+main .location .grid .address .street {
+  padding-bottom: 20px;
+}
+
+main .location .grid .address .street a {
+  color: #009639;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .location .grid .address .street a .icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .location .grid .address .street a .icon .fa {
+  font-size: 56px;
+}
+
+main .location .grid .address .street a .content p {
+  margin-bottom: 0;
+  font-size: 28px;
 }
 
 main .location .grid .address .number {
@@ -877,6 +922,23 @@ main .location .grid .address .number {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+main .location .grid .address .number .icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main .location .grid .address .number .icon .fa {
+  font-size: 56px;
+  color: #009639;
+}
+
+main .location .grid .address .number .content p {
+  margin-bottom: 0;
+  color: #009639;
+  font-size: 28px;
 }
 
 /* Footer Styles... */
