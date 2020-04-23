@@ -498,31 +498,86 @@ main .bottom .grid {
           flex-direction: row;
 }
 
-main .bottom .grid .col .card {
+@media screen and (max-width: 1023px) {
+  main .bottom .grid {
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main .bottom .grid {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .bottom .grid {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main .bottom .grid {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  main .bottom .grid {
+    padding: 26px 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  main .bottom .grid {
+    width: 100%;
+  }
+}
+
+main .bottom .grid .card {
   border-color: #009639;
   border-radius: 8px;
   -webkit-box-shadow: 0 8px 6px -6px #373d3f;
   box-shadow: 0 8px 6px -6px #373d3f;
 }
 
-main .bottom .grid .col .card .title {
+@media screen and (max-width: 1024px) {
+  main .bottom .grid .card {
+    margin-bottom: 28px;
+  }
+}
+
+main .bottom .grid .card .title {
   background: #009639;
   color: white;
   text-align: center;
   padding: 14px 0;
 }
 
-main .bottom .grid .col .card .title h3 {
+main .bottom .grid .card .title h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   margin-bottom: 0;
   font-size: 22px;
 }
 
-main .bottom .grid .col .card .info {
+@media screen and (max-width: 360px) {
+  main .bottom .grid .card .title h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  main .bottom .grid .card .title h3 {
+    font-size: 18px;
+  }
+}
+
+main .bottom .grid .card .info {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,18 +585,19 @@ main .bottom .grid .col .card .info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-main .bottom .grid .col .card .info img {
+main .bottom .grid .card .info img {
   width: 85%;
   margin: 0 auto;
   height: 200px;
   padding-bottom: 26px;
 }
 
-main .bottom .grid .col .card .info h6 {
+main .bottom .grid .card .info h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   color: #009639;
@@ -550,7 +606,13 @@ main .bottom .grid .col .card .info h6 {
           text-decoration: underline #009639;
 }
 
-main .bottom .grid .col .card .info p {
+@media screen and (max-width: 360px) {
+  main .bottom .grid .card .info h6 {
+    font-size: 18px;
+  }
+}
+
+main .bottom .grid .card .info p {
   width: 85%;
   margin: 0 auto;
   text-align: left;
@@ -561,14 +623,20 @@ main .bottom .grid .col .card .info p {
   padding-bottom: 8px;
 }
 
-main .bottom .grid .col .card .info .list ul {
+@media screen and (max-width: 640px) {
+  main .bottom .grid .card .info p {
+    font-size: 16px;
+  }
+}
+
+main .bottom .grid .card .info .list ul {
   text-align: left;
   width: 70%;
   margin: 0 auto;
   padding-bottom: 12px;
 }
 
-main .bottom .grid .col .card .info .list ul li {
+main .bottom .grid .card .info .list ul li {
   list-style-type: circle;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -577,7 +645,13 @@ main .bottom .grid .col .card .info .list ul li {
   font-style: italic;
 }
 
-main .bottom .grid .col .card .info .graph-link h6 {
+@media screen and (max-width: 640px) {
+  main .bottom .grid .card .info .list ul li {
+    font-size: 14px;
+  }
+}
+
+main .bottom .grid .card .info .graph-link h6 {
   font-weight: 300;
   color: #373d3f;
   font-style: italic;
@@ -587,11 +661,11 @@ main .bottom .grid .col .card .info .graph-link h6 {
   padding-top: 14px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph {
+main .bottom .grid .card .info .graph-link .graph {
   padding-top: 6px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .high {
+main .bottom .grid .card .info .graph-link .graph .high {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,7 +676,7 @@ main .bottom .grid .col .card .info .graph-link .graph .high {
   padding: 4px 28px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .high .bracket {
+main .bottom .grid .card .info .graph-link .graph .high .bracket {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -613,7 +687,7 @@ main .bottom .grid .col .card .info .graph-link .graph .high .bracket {
   font-style: italic;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .high .bars {
+main .bottom .grid .card .info .graph-link .graph .high .bars {
   width: 100%;
   padding: 0 8px;
   -ms-flex-item-align: center;
@@ -621,7 +695,7 @@ main .bottom .grid .col .card .info .graph-link .graph .high .bars {
       align-self: center;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .high .bars .us {
+main .bottom .grid .card .info .graph-link .graph .high .bars .us {
   border: 10px solid #97D700;
   width: 95%;
   margin-bottom: 0;
@@ -629,7 +703,13 @@ main .bottom .grid .col .card .info .graph-link .graph .high .bars .us {
   margin-left: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .high .bars .tx {
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .high .bars .us {
+    width: 100%;
+  }
+}
+
+main .bottom .grid .card .info .graph-link .graph .high .bars .tx {
   border: 10px solid #009639;
   width: 90%;
   margin-left: 0;
@@ -637,13 +717,25 @@ main .bottom .grid .col .card .info .graph-link .graph .high .bars .tx {
   margin-top: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .high .numbers span {
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .high .bars .tx {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .high .numbers {
+    margin-left: 4px;
+  }
+}
+
+main .bottom .grid .card .info .graph-link .graph .high .numbers span {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #373d3f;
   font-size: 14px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .med {
+main .bottom .grid .card .info .graph-link .graph .med {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,7 +746,7 @@ main .bottom .grid .col .card .info .graph-link .graph .med {
   padding: 4px 28px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .med .bracket {
+main .bottom .grid .card .info .graph-link .graph .med .bracket {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -665,7 +757,7 @@ main .bottom .grid .col .card .info .graph-link .graph .med .bracket {
   font-style: italic;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .med .bars {
+main .bottom .grid .card .info .graph-link .graph .med .bars {
   width: 100%;
   padding: 0 8px;
   padding-left: 11px;
@@ -674,7 +766,7 @@ main .bottom .grid .col .card .info .graph-link .graph .med .bars {
       align-self: center;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .med .bars .us {
+main .bottom .grid .card .info .graph-link .graph .med .bars .us {
   border: 10px solid #97D700;
   width: 50%;
   margin-bottom: 0;
@@ -682,7 +774,13 @@ main .bottom .grid .col .card .info .graph-link .graph .med .bars .us {
   margin-left: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .med .bars .tx {
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .med .bars .us {
+    width: 42%;
+  }
+}
+
+main .bottom .grid .card .info .graph-link .graph .med .bars .tx {
   border: 10px solid #009639;
   width: 55%;
   margin-left: 0;
@@ -690,13 +788,25 @@ main .bottom .grid .col .card .info .graph-link .graph .med .bars .tx {
   margin-top: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .med .numbers span {
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .med .bars .tx {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .med .numbers {
+    margin-left: 4px;
+  }
+}
+
+main .bottom .grid .card .info .graph-link .graph .med .numbers span {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #373d3f;
   font-size: 14px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .low {
+main .bottom .grid .card .info .graph-link .graph .low {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,7 +817,7 @@ main .bottom .grid .col .card .info .graph-link .graph .low {
   padding: 4px 28px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .low .bracket {
+main .bottom .grid .card .info .graph-link .graph .low .bracket {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -718,7 +828,7 @@ main .bottom .grid .col .card .info .graph-link .graph .low .bracket {
   font-style: italic;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .low .bars {
+main .bottom .grid .card .info .graph-link .graph .low .bars {
   width: 100%;
   padding: 0 8px;
   padding-left: 11px;
@@ -727,7 +837,7 @@ main .bottom .grid .col .card .info .graph-link .graph .low .bars {
       align-self: center;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .low .bars .us {
+main .bottom .grid .card .info .graph-link .graph .low .bars .us {
   border: 10px solid #97D700;
   width: 25%;
   margin-bottom: 0;
@@ -735,7 +845,13 @@ main .bottom .grid .col .card .info .graph-link .graph .low .bars .us {
   margin-left: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .low .bars .tx {
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .low .bars .us {
+    width: 18%;
+  }
+}
+
+main .bottom .grid .card .info .graph-link .graph .low .bars .tx {
   border: 10px solid #009639;
   width: 30%;
   margin-left: 0;
@@ -743,13 +859,25 @@ main .bottom .grid .col .card .info .graph-link .graph .low .bars .tx {
   margin-top: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .low .numbers span {
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .low .bars .tx {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main .bottom .grid .card .info .graph-link .graph .low .numbers {
+    margin-left: 4px;
+  }
+}
+
+main .bottom .grid .card .info .graph-link .graph .low .numbers span {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #373d3f;
   font-size: 14px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region {
+main .bottom .grid .card .info .graph-link .graph .region {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -763,7 +891,7 @@ main .bottom .grid .col .card .info .graph-link .graph .region {
   padding: 10px 0 20px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .dfw {
+main .bottom .grid .card .info .graph-link .graph .region .dfw {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,20 +902,20 @@ main .bottom .grid .col .card .info .graph-link .graph .region .dfw {
   margin: 0 10px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .dfw .color {
+main .bottom .grid .card .info .graph-link .graph .region .dfw .color {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   width: 26px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .dfw .color hr {
+main .bottom .grid .card .info .graph-link .graph .region .dfw .color hr {
   border: 5px solid #009639;
   border-radius: 3px;
   margin: 0 5px 3px 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .dfw p {
+main .bottom .grid .card .info .graph-link .graph .region .dfw p {
   font-size: 12px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: italic;
@@ -798,7 +926,7 @@ main .bottom .grid .col .card .info .graph-link .graph .region .dfw p {
   padding-bottom: 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .usa {
+main .bottom .grid .card .info .graph-link .graph .region .usa {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,20 +937,20 @@ main .bottom .grid .col .card .info .graph-link .graph .region .usa {
   margin: 0 10px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .usa .color {
+main .bottom .grid .card .info .graph-link .graph .region .usa .color {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   width: 26px;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .usa .color hr {
+main .bottom .grid .card .info .graph-link .graph .region .usa .color hr {
   border: 5px solid #97D700;
   border-radius: 3px;
   margin: 0 5px 3px 0;
 }
 
-main .bottom .grid .col .card .info .graph-link .graph .region .usa p {
+main .bottom .grid .card .info .graph-link .graph .region .usa p {
   font-size: 12px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: italic;
@@ -833,30 +961,23 @@ main .bottom .grid .col .card .info .graph-link .graph .region .usa p {
   padding-bottom: 0;
 }
 
-main .bottom .grid .col .card .info .btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  background: #009639;
-  color: white;
-  width: 35%;
-  margin: 0 auto;
-  padding: 10px 0;
-  margin-top: 10px;
+main .bottom .grid .card .info .btn {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #009639;
+  margin-bottom: 18px;
+  margin-left: 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: italic;
   text-transform: uppercase;
   -webkit-transition: .3s;
   transition: .3s;
-  border-radius: 4px;
 }
 
-main .bottom .grid .col .card .info .btn:hover {
+main .bottom .grid .card .info .btn:hover {
   color: #97D700;
-}
-
-main .bottom .grid .col .card .info .bhc-btn {
-  margin-top: 2px;
 }
 
 main .location .grid {
@@ -870,6 +991,7 @@ main .location .grid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 20px;
 }
 
 main .location .grid .address {
@@ -884,12 +1006,58 @@ main .location .grid .address {
       align-self: center;
 }
 
+@media screen and (max-width: 640px) {
+  main .location .grid .address {
+    padding: 20px 0 0;
+  }
+}
+
+main .location .grid .address img {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main .location .grid .address img {
+    width: 60%;
+  }
+}
+
 main .location .grid .address .street {
-  padding-bottom: 20px;
+  padding-bottom: 8px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1070px) {
+  main .location .grid .address .street {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address .street {
+    width: 80%;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main .location .grid .address .street {
+    width: 85%;
+    padding-bottom: 6px;
+  }
 }
 
 main .location .grid .address .street a {
-  color: #009639;
+  color: #373d3f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -899,19 +1067,50 @@ main .location .grid .address .street a {
           flex-direction: row;
 }
 
+@media screen and (max-width: 640px) {
+  main .location .grid .address .street a {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 6px;
+    padding-top: 8px;
+  }
+}
+
 main .location .grid .address .street a .icon {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding-right: 20px;
 }
 
 main .location .grid .address .street a .icon .fa {
-  font-size: 56px;
+  font-size: 28px;
+  color: #009639;
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address .street a .icon .fa {
+    font-size: 30px;
+  }
 }
 
 main .location .grid .address .street a .content p {
   margin-bottom: 0;
-  font-size: 28px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address .street a .content p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main .location .grid .address .street a .content p {
+    font-size: 16px;
+  }
 }
 
 main .location .grid .address .number {
@@ -922,23 +1121,104 @@ main .location .grid .address .number {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1070px) {
+  main .location .grid .address .number {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address .number {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main .location .grid .address .number {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main .location .grid .address .number {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 main .location .grid .address .number .icon {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding-right: 14px;
 }
 
 main .location .grid .address .number .icon .fa {
-  font-size: 56px;
+  font-size: 28px;
   color: #009639;
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address .number .icon .fa {
+    font-size: 30px;
+  }
 }
 
 main .location .grid .address .number .content p {
   margin-bottom: 0;
-  color: #009639;
-  font-size: 28px;
+  color: #373d3f;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 904px) {
+  main .location .grid .address .number .content p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main .location .grid .address .number .content p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main .location .grid .map {
+    text-align: center;
+    padding: 26px 0;
+  }
+}
+
+main .location .grid .map img {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #009639;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  main .location .grid .map img {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main .location .grid .map img {
+    width: 400px;
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main .location .grid .map img {
+    width: 340px;
+    height: 240px;
+  }
 }
 
 /* Footer Styles... */
