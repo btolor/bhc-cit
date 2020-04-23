@@ -613,15 +613,16 @@ main
 
 /* Footer Styles... */
 footer
-    background: green
+    background: black
     .grid
-        padding: 28px 0 22px
+        padding: 16px 0 18px
         +fullFlex(flex,row,space-between)
         +center(95%, 0 auto)
         +media-max(850px)
             +fullFlex(flex,column, center)
         .policy
             align-self: flex-end
+            text-align: center
             a 
                 color: white
                 margin-bottom: 0
@@ -634,12 +635,17 @@ footer
                 +media-max(850px)
                     display: none
         .logo
+            margin: 0
             +media-max(850px)
                 text-align: center
+                width: 100%
             img 
-                width: 220px
+                width: 100%
+                +media-max(850px)
+                    width: 75%
         .copywrights
             align-self: flex-end
+            text-align: center
             +media-max(850px)
                 align-self: center
                 text-align: center

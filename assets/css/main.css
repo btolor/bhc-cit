@@ -1223,11 +1223,11 @@ main .location .grid .map img {
 
 /* Footer Styles... */
 footer {
-  background: green;
+  background: black;
 }
 
 footer .grid {
-  padding: 28px 0 22px;
+  padding: 16px 0 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1260,6 +1260,7 @@ footer .grid {
 footer .grid .policy {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  text-align: center;
 }
 
 footer .grid .policy a {
@@ -1282,19 +1283,31 @@ footer .grid .policy a:hover {
   }
 }
 
+footer .grid .logo {
+  margin: 0;
+}
+
 @media screen and (max-width: 850px) {
   footer .grid .logo {
     text-align: center;
+    width: 100%;
   }
 }
 
 footer .grid .logo img {
-  width: 220px;
+  width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  footer .grid .logo img {
+    width: 75%;
+  }
 }
 
 footer .grid .copywrights {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  text-align: center;
 }
 
 @media screen and (max-width: 850px) {
