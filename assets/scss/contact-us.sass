@@ -123,6 +123,109 @@ header
 /* Main Styles... */
 main 
     .intro
+        .grid-container  
+            padding-top: 60px
+            padding-bottom: 40px
+            +media-max(640px)
+                padding-bottom: 20px
+            +media-max(500px)
+                padding-top: 30px
+            h1 
+                font-family: $text-font 
+                color: $dark-green
+                text-transform: uppercase
+                text-align: center
+                font-size: 52px
+                font-weight: 700
+                letter-spacing: -2px
+                font-style: italic
+                padding-bottom: 10px
+                text-decoration: underline
+                +media-max(860px)
+                    font-size: 46px
+                +media-max(640px)
+                    font-size: 38px
+                +media-max(500px)
+                    font-size: 32px
+            p 
+                font-family: $text-font 
+                font-size: 16px
+                font-style: italic
+                +center(60%, 0 auto)
+                font-weight: 400
+                +media-max(860px)
+                    width: 75%
+                +media-max(640px)
+                    width: 80% 
+                    font-size: 15px
+                +media-max(530px)
+                    width: 90%
+    .content
+        .grid
+            padding: 40px 0 70px
+            +flex(flex,row)
+            +media-max(860px)
+                flex-direction: column-reverse
+            +media-max(768px)
+                padding-bottom: 40px
+            +media-max(530px)
+                padding-top: 12px
+            .info-box
+                align-self: center
+                text-align: center
+                +media-max(860px)
+                    padding-top: 40px
+                    width: 90%
+                .info
+                    padding-bottom: 10px
+                    h4 
+                        font-family: $text-font 
+                        font-size: 17px
+                        color: $text-color
+                        padding-bottom: 4px
+                        a 
+                          color: $text-color  
+                a
+                    margin: 0
+                    img 
+                        width: 400px
+                        height: 300px
+                        object-fit: contain
+            .form-box 
+                align-self: center
+                border: 1px solid $dark-green
+                padding: 26px 0
+                -moz-box-shadow: 0 8px 6px -6px $text-color
+                -webkit-box-shadow: 0 8px 6px -6px $text-color
+                box-shadow: 0 8px 6px -6px $text-color
+                +media-max(860px)
+                    width: 70%
+                +media-max(640px)
+                    width: 90%
+                h3 
+                    font-family: $text-font 
+                    color: $dark-green
+                    text-transform: capitalize
+                    font-weight: 600 
+                    font-style: italic
+                    font-size: 32px
+                    text-decoration: underline
+                    +media-max(900px)
+                        font-size: 28px
+                    +media-max(860px)
+                        font-size: 30px
+                    +media-max(500px)
+                        font-size: 28px
+                    +media-max(460px)
+                        font-size: 26px
+                form 
+                    +center(85%, 0 auto)
+                    padding-top: 20px
+                    input, textarea 
+                        border-radius: 4px
+                        font-family: $text-font 
+                        &:focus
+                            outline: none
 /* Footer Styles... */
 footer
     background: black

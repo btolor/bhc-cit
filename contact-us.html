@@ -66,7 +66,7 @@
             <!-- start of container -->
             <div class="grid-container">
                 <h1 id="page-title">contact us</h1>
-                <p>
+                <p class="text-center">
                     For more information about the Web Design and Development program at 
                     Brookhaven College, please contact:
                 </p>
@@ -74,18 +74,44 @@
             <!-- end of container -->
         </section>
         <!-- end of intro-section -->
-        <!--         
-        Professor Stephen Herd
-        office: Bldg K, Room K104
-        E-mail: sherd@dcccd.edu
-        Phone: 972.860.4329 
-        -->
+
         <!-- start of content-section -->
         <section class="content">
             <!-- start of container -->
             <div class="grid-container">
                 <!-- start of grid -->
-                <div class="grid-margin-x grid-x grid"></div>
+                <div class="grid-margin-x grid-x grid">
+
+                    <!-- start of info-box -->
+                    <div class="cell small-12 medium-6 large-7 info-box">
+                        <!-- start of info -->
+                        <div class="info">
+                            <h4 id="name">Professor Stephen Herd</h4>
+                            <h4 id="office"><i class="fa fa-building" aria-hidden="true"></i>: Bldg K, Room K104</h4>
+                            <h4 id=""email><a href="mailto:sherd@dcccd.edu" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i>: sherd@dcccd.edu</a></h4>
+                            <h4 id=""number><i class="fa fa-phone-square" aria-hidden="true"></i>: 972.860.4329 </h4>
+                        </div>
+                        <!-- end of info -->
+                        <a href="#/">
+                            <img src="assets/images/Screenshot 2020-04-24 at 3.56.50 AM.png" alt="">
+                        </a>
+                    </div>
+                    <!-- end of info-box -->
+                    <!-- start of form-box -->
+                    <div class="cell small-12 medium-6 large-5 form-box">
+                        <h3 class="text-center">leave a message:</h3>
+                        <!-- start of form -->
+                        <form action="contact-us.html" method="post">
+                            <input type="text" name="subject-input" id="subject-input" placeholder="Subject:">
+                            <input type="email" name="email-input" id="email-input" placeholder="Email:">
+                            <input type="text" name="name-input" id="name-input" placeholder="Name:">
+                            <textarea name="message-input" id="message-input" cols="40" rows="6" placeholder="Message:"></textarea>
+                        </form>
+                        <!-- end of form -->
+                    </div>
+                    <!-- end of form-box -->
+
+                </div>
                 <!-- end of grid -->
             </div>
             <!-- end of container -->

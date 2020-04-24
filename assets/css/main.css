@@ -538,7 +538,6 @@ main .bottom .grid {
 
 main .bottom .grid .card {
   border-color: #009639;
-  border-radius: 8px;
   -webkit-box-shadow: 0 8px 6px -6px #373d3f;
   box-shadow: 0 8px 6px -6px #373d3f;
 }
