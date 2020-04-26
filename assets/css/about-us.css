@@ -259,37 +259,8 @@ main .intro .grid-container h1 {
   }
 }
 
-main .intro .grid-container p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-style: italic;
-  color: #373d3f;
-  width: 60%;
-  margin: 0 auto;
-  font-weight: 400;
-}
-
-@media screen and (max-width: 860px) {
-  main .intro .grid-container p {
-    width: 75%;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  main .intro .grid-container p {
-    width: 80%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  main .intro .grid-container p {
-    width: 90%;
-  }
-}
-
-main .content .grid {
-  padding: 40px 0 70px;
+main .students .grid {
+  padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,141 +271,138 @@ main .content .grid {
 }
 
 @media screen and (max-width: 860px) {
-  main .content .grid {
+  main .students .grid {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main .content .grid {
-    padding-bottom: 40px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  main .content .grid {
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-top: 0;
   }
 }
 
-@media screen and (max-width: 530px) {
-  main .content .grid {
-    padding-top: 12px;
+@media screen and (max-width: 640px) {
+  main .students .grid {
+    padding-top: 0;
+    padding-bottom: 40px;
   }
 }
 
-main .content .grid .info-box {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
-}
-
 @media screen and (max-width: 860px) {
-  main .content .grid .info-box {
-    padding-top: 40px;
-    width: 90%;
+  main .students .grid .student {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 42px;
   }
 }
 
-main .content .grid .info-box .info {
-  padding-bottom: 10px;
-}
-
-main .content .grid .info-box .info h4 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 17px;
-  color: #373d3f;
-  padding-bottom: 4px;
-}
-
-main .content .grid .info-box .info h4 a {
-  color: #373d3f;
-}
-
-main .content .grid .info-box a {
-  margin: 0;
-}
-
-main .content .grid .info-box a img {
-  width: 400px;
-  height: 300px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-main .content .grid .form-box {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: 1px solid #009639;
-  padding: 26px 0;
-  -webkit-box-shadow: 0 8px 6px -6px #373d3f;
-  box-shadow: 0 8px 6px -6px #373d3f;
-}
-
-@media screen and (max-width: 860px) {
-  main .content .grid .form-box {
-    width: 70%;
+@media screen and (max-width: 768px) {
+  main .students .grid .student {
+    width: 85%;
   }
 }
 
 @media screen and (max-width: 640px) {
-  main .content .grid .form-box {
+  main .students .grid .student {
+    width: 100%;
+  }
+}
+
+main .students .grid .student .box {
+  width: 86%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 8px 6px -6px #373d3f;
+  box-shadow: 0 8px 6px -6px #373d3f;
+}
+
+@media screen and (max-width: 640px) {
+  main .students .grid .student .box {
     width: 90%;
   }
 }
 
-main .content .grid .form-box h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #009639;
-  text-transform: capitalize;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 32px;
-  text-decoration: underline;
+main .students .grid .student .box img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media screen and (max-width: 900px) {
-  main .content .grid .form-box h3 {
-    font-size: 28px;
+main .students .grid .student .box .info {
+  border: 1px solid #009639;
+}
+
+main .students .grid .student .box .info .title {
+  background: #009639;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+main .students .grid .student .box .info .title h3 {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 26px;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 400px) {
+  main .students .grid .student .box .info .title h3 {
+    font-size: 22px;
   }
+}
+
+main .students .grid .student .box .info p {
+  padding: 12px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #373d3f;
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 640px) {
+  main .students .grid .student .box .info p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main .students .grid .student .box .info p {
+    font-size: 17px;
+  }
+}
+
+main .students .grid .student .box .info .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .students .grid .student .box .info .social-links a {
+  color: #009639;
+  font-size: 40px;
+  margin: 0 16px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .students .grid .student .box .info .social-links a:hover {
+  color: #97D700;
 }
 
 @media screen and (max-width: 860px) {
-  main .content .grid .form-box h3 {
-    font-size: 30px;
+  main .students .grid .joshua {
+    padding-bottom: 0;
   }
-}
-
-@media screen and (max-width: 500px) {
-  main .content .grid .form-box h3 {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  main .content .grid .form-box h3 {
-    font-size: 26px;
-  }
-}
-
-main .content .grid .form-box form {
-  width: 85%;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-main .content .grid .form-box form input, main .content .grid .form-box form textarea {
-  border-radius: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-main .content .grid .form-box form input:focus, main .content .grid .form-box form textarea:focus {
-  outline: none;
 }
 
 /* Footer Styles... */
@@ -582,4 +550,4 @@ footer .grid .copywrights p {
     font-size: 12px;
   }
 }
-/*# sourceMappingURL=contact-us.css.map */
+/*# sourceMappingURL=about-us.css.map */

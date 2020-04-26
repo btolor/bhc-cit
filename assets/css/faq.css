@@ -223,6 +223,10 @@ header .grid .active {
 }
 
 /* Main Styles... */
+main {
+  /* Footer Styles... */
+}
+
 main .intro .grid-container {
   padding-top: 30px;
   padding-bottom: 20px;
@@ -259,37 +263,8 @@ main .intro .grid-container h1 {
   }
 }
 
-main .intro .grid-container p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-style: italic;
-  color: #373d3f;
-  width: 60%;
-  margin: 0 auto;
-  font-weight: 400;
-}
-
-@media screen and (max-width: 860px) {
-  main .intro .grid-container p {
-    width: 75%;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  main .intro .grid-container p {
-    width: 80%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  main .intro .grid-container p {
-    width: 90%;
-  }
-}
-
 main .content .grid {
-  padding: 40px 0 70px;
+  padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,142 +277,166 @@ main .content .grid {
 @media screen and (max-width: 860px) {
   main .content .grid {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   main .content .grid {
     padding-bottom: 40px;
   }
 }
 
-@media screen and (max-width: 640px) {
-  main .content .grid {
-    padding-top: 0;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  main .content .grid {
-    padding-top: 12px;
-  }
-}
-
-main .content .grid .info-box {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
-}
-
-@media screen and (max-width: 860px) {
-  main .content .grid .info-box {
-    padding-top: 40px;
-    width: 90%;
-  }
-}
-
-main .content .grid .info-box .info {
-  padding-bottom: 10px;
-}
-
-main .content .grid .info-box .info h4 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 17px;
-  color: #373d3f;
-  padding-bottom: 4px;
-}
-
-main .content .grid .info-box .info h4 a {
-  color: #373d3f;
-}
-
-main .content .grid .info-box a {
-  margin: 0;
-}
-
-main .content .grid .info-box a img {
-  width: 400px;
-  height: 300px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-main .content .grid .form-box {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: 1px solid #009639;
-  padding: 26px 0;
+main .content .grid .card {
+  border-color: #009639;
   -webkit-box-shadow: 0 8px 6px -6px #373d3f;
   box-shadow: 0 8px 6px -6px #373d3f;
 }
 
 @media screen and (max-width: 860px) {
-  main .content .grid .form-box {
-    width: 70%;
+  main .content .grid .card {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .content .grid .card {
+    width: 85%;
   }
 }
 
 @media screen and (max-width: 640px) {
-  main .content .grid .form-box {
+  main .content .grid .card {
     width: 90%;
   }
 }
 
-main .content .grid .form-box h3 {
+main .content .grid .card .title {
+  background: #009639;
+  border-bottom: 1px solid black;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+}
+
+main .content .grid .card .title h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #009639;
-  text-transform: capitalize;
   font-weight: 600;
-  font-style: italic;
-  font-size: 32px;
-  text-decoration: underline;
+  margin-bottom: 0;
+  font-size: 26px;
 }
 
-@media screen and (max-width: 900px) {
-  main .content .grid .form-box h3 {
-    font-size: 28px;
+@media screen and (max-width: 360px) {
+  main .content .grid .card .title h3 {
+    font-size: 24px;
   }
 }
 
-@media screen and (max-width: 860px) {
-  main .content .grid .form-box h3 {
-    font-size: 30px;
+@media screen and (max-width: 400px) {
+  main .content .grid .card .title h3 {
+    font-size: 22px;
   }
 }
 
-@media screen and (max-width: 500px) {
-  main .content .grid .form-box h3 {
-    font-size: 28px;
-  }
+main .content .grid .card .box {
+  text-align: center;
+  padding: 30px 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@media screen and (max-width: 460px) {
-  main .content .grid .form-box h3 {
-    font-size: 26px;
-  }
-}
-
-main .content .grid .form-box form {
+main .content .grid .card .box img {
   width: 85%;
   margin: 0 auto;
-  padding-top: 20px;
+  height: 240px;
+  padding-bottom: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-main .content .grid .form-box form input, main .content .grid .form-box form textarea {
-  border-radius: 4px;
+@media screen and (max-width: 640px) {
+  main .content .grid .card .box img {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .content .grid .card .box img {
+    width: 100%;
+  }
+}
+
+main .content .grid .card .box .question-box {
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 640px) {
+  main .content .grid .card .box .question-box {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .content .grid .card .box .question-box {
+    width: 100%;
+  }
+}
+
+main .content .grid .card .box .question-box h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  color: #009639;
+  font-weight: 600;
+  -webkit-text-decoration: underline #009639;
+          text-decoration: underline #009639;
+  text-align: left;
 }
 
-main .content .grid .form-box form input:focus, main .content .grid .form-box form textarea:focus {
-  outline: none;
+@media screen and (max-width: 360px) {
+  main .content .grid .card .box .question-box h6 {
+    font-size: 18px;
+  }
 }
 
-/* Footer Styles... */
+main .content .grid .card .box .question-box p {
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  color: #373d3f;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+}
+
+main .content .grid .card .box .question-box p strong {
+  color: #009639;
+}
+
+@media screen and (max-width: 640px) {
+  main .content .grid .card .box .question-box p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  main .content .grid .prespective-students {
+    margin-bottom: 0;
+  }
+}
+
 footer {
   background: black;
 }
@@ -582,4 +581,4 @@ footer .grid .copywrights p {
     font-size: 12px;
   }
 }
-/*# sourceMappingURL=contact-us.css.map */
+/*# sourceMappingURL=faq.css.map */

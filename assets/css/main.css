@@ -550,6 +550,7 @@ main .bottom .grid .card {
 
 main .bottom .grid .card .title {
   background: #009639;
+  border-bottom: 1px solid black;
   color: white;
   text-align: center;
   padding: 14px 0;

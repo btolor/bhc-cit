@@ -148,88 +148,74 @@ main
                     font-size: 38px
                 +media-max(500px)
                     font-size: 32px
-            p 
-                font-family: $text-font 
-                font-size: 16px
-                font-style: italic
-                color: $text-color
-                +center(60%, 0 auto)
-                font-weight: 400
-                +media-max(860px)
-                    width: 75%
-                +media-max(640px)
-                    width: 80% 
-                    font-size: 15px
-                +media-max(530px)
-                    width: 90%
-    .content
-        .grid
-            padding: 40px 0 70px
+    .students
+        .grid 
+            padding: 60px 0 
             +flex(flex,row)
             +media-max(860px)
-                flex-direction: column-reverse
-            +media-max(768px)
-                padding-bottom: 40px
+                flex-direction: column
+                padding-top: 0
             +media-max(640px)
                 padding-top: 0
-            +media-max(530px)
-                padding-top: 12px
-            .info-box
-                align-self: center
-                text-align: center
+                padding-bottom: 40px
+            .student 
                 +media-max(860px)
-                    padding-top: 40px
-                    width: 90%
-                .info
-                    padding-bottom: 10px
-                    h4 
-                        font-family: $text-font 
-                        font-size: 17px
-                        color: $text-color
-                        padding-bottom: 4px
-                        a 
-                          color: $text-color  
-                a
-                    margin: 0
-                    img 
-                        width: 400px
-                        height: 300px
-                        object-fit: contain
-            .form-box 
-                align-self: center
-                border: 1px solid $dark-green
-                padding: 26px 0
-                -moz-box-shadow: 0 8px 6px -6px $text-color
-                -webkit-box-shadow: 0 8px 6px -6px $text-color
-                box-shadow: 0 8px 6px -6px $text-color
-                +media-max(860px)
-                    width: 70%
+                    +center(80%,0 auto)
+                    padding-bottom: 42px
+                +media-max(768px)
+                    width: 85%
                 +media-max(640px)
-                    width: 90%
-                h3 
-                    font-family: $text-font 
-                    color: $dark-green
-                    text-transform: capitalize
-                    font-weight: 600 
-                    font-style: italic
-                    font-size: 32px
-                    text-decoration: underline
-                    +media-max(900px)
-                        font-size: 28px
-                    +media-max(860px)
-                        font-size: 30px
-                    +media-max(500px)
-                        font-size: 28px
-                    +media-max(460px)
-                        font-size: 26px
-                form 
-                    +center(85%, 0 auto)
-                    padding-top: 20px
-                    input, textarea 
-                        border-radius: 4px
-                        font-family: $text-font 
-                        &:focus
-                            outline: none
+                    width: 100%
+                .box
+                    +center(86%, 0 auto)
+                    -moz-box-shadow: 0 8px 6px -6px $text-color
+                    -webkit-box-shadow: 0 8px 6px -6px $text-color
+                    box-shadow: 0 8px 6px -6px $text-color
+                    +media-max(640px)
+                        width: 90%
+                    img 
+                        width: 100%
+                        height: 200px
+                        margin-bottom: 20px
+                        object-fit: cover
+                    .info   
+                        border: 1px solid $dark-green
+                        .title
+                            background: $dark-green
+                            border-bottom: 1px solid black
+                            text-align: center
+                            h3 
+                                color: white
+                                font-family: $text-font 
+                                font-weight: 600 
+                                margin-bottom: 0
+                                font-size: 26px
+                                padding: 10px 0
+                                +media-max(400px)
+                                    font-size: 22px
+                        p
+                            padding: 12px 18px  
+                            font-family: $text-font 
+                            color: $text-color 
+                            font-size: 20px
+                            margin-bottom: 0
+                            font-weight: 300
+                            +media-max(640px)
+                                font-size: 18px
+                            +media-max(320px)
+                                font-size: 17px
+                        .social-links 
+                            +fullFlex(flex,row,center)
+                            a 
+                                color: $dark-green
+                                font-size: 40px
+                                margin: 0 16px
+                                transition: .3s
+                                &:hover
+                                    color: $light-green
+            .joshua 
+                +media-max(860px)
+                    padding-bottom: 0
 /* Footer Styles... */
 footer
     background: black
