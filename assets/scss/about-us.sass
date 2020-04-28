@@ -17,22 +17,22 @@ header
     background-color: white
     border-bottom: 2px solid green
     .grid
-        padding: 20px 0 16px
+        padding: 20px 0 8px
         +media-max(640px)
-            padding: 6% 0  2.5%
+            padding: 10px 0  4px
         .logo-sec
             display: flex
-            align-items: center
+            align-items: flex-end
             img 
-                width: 380px
                 +media-max(640px)
-                    width: 250px
+                    width: 200px
                 +media-max(400px)
-                    width: 220px
+                    width: 180px
         .menu-sec
             +fullFlex(flex, row,space-between)
-            align-items: flex-end
+            align-items: center
             padding-left: 20px
+            padding-top: 14px
             +media-max(860px)
                 display: none
             a 
@@ -50,6 +50,7 @@ header
             display: none
             justify-content: flex-end
             align-items: center
+            padding-top: 8px
             +media-max(860px)
                 display: flex
             a 
@@ -177,7 +178,7 @@ main
                         width: 100%
                         height: 200px
                         margin-bottom: 20px
-                        object-fit: cover
+                        // object-fit: cover
                     .info   
                         border: 1px solid $dark-green
                         .title
@@ -197,13 +198,11 @@ main
                             padding: 12px 18px  
                             font-family: $text-font 
                             color: $text-color 
-                            font-size: 20px
+                            font-size: 18px
                             margin-bottom: 0
-                            font-weight: 300
+                            // font-weight: 300
                             +media-max(640px)
-                                font-size: 18px
-                            +media-max(320px)
-                                font-size: 17px
+                                font-size: 16px
                         .social-links 
                             +fullFlex(flex,row,center)
                             a 
@@ -226,34 +225,38 @@ footer
         +media-max(850px)
             +fullFlex(flex,column, center)
         .policy
-            align-self: flex-end
             text-align: center
+            align-self: flex-end
+            +media-max(850px)
+                align-self: center
+                padding-top: 8px
+                +center(60%,0 auto)
+            +media-max(500px)
+                width: 70%
             a 
-                color: white
                 margin-bottom: 0
-                font-family: $text-font
-                font-size: 14px
-                font-weight: 400
-                transition: .3s
-                &:hover
-                    color: $dark-green
-                +media-max(850px)
-                    display: none
+                img 
+                    +media-max(850px)
+                        width: 100%
         .logo
             margin: 0
+            align-self: flex-end
             +media-max(850px)
                 text-align: center
                 width: 100%
+                padding: 6px 0
             img 
-                width: 100%
+                width: 180px
                 +media-max(850px)
-                    width: 75%
+                    width: 160px
         .copywrights
-            align-self: flex-end
+            align-self: center
+            padding-top: 20px
             text-align: center
             +media-max(850px)
                 align-self: center
                 text-align: center
+                padding: 0
             a 
                 color: white
                 margin-bottom: 0
@@ -261,12 +264,12 @@ footer
                 font-size: 14px
                 font-weight: 400
                 transition: .3s
-                display: none
+                // display: none
                 &:hover
                     color: $dark-green
                 +media-max(850px)
                     display: block
-                    margin-top: 19px
+                    margin-top: 14px
                 +media-max(700px)
                     font-size: 12px
             p 

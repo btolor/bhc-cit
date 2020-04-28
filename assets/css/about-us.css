@@ -9,12 +9,12 @@ header {
 }
 
 header .grid {
-  padding: 20px 0 16px;
+  padding: 20px 0 8px;
 }
 
 @media screen and (max-width: 640px) {
   header .grid {
-    padding: 6% 0  2.5%;
+    padding: 10px 0  4px;
   }
 }
 
@@ -22,24 +22,20 @@ header .grid .logo-sec {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .grid .logo-sec img {
-  width: 380px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media screen and (max-width: 640px) {
   header .grid .logo-sec img {
-    width: 250px;
+    width: 200px;
   }
 }
 
 @media screen and (max-width: 400px) {
   header .grid .logo-sec img {
-    width: 220px;
+    width: 180px;
   }
 }
 
@@ -54,10 +50,11 @@ header .grid .menu-sec {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 20px;
+  padding-top: 14px;
 }
 
 @media screen and (max-width: 860px) {
@@ -89,6 +86,7 @@ header .grid .mobile-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 8px;
 }
 
 @media screen and (max-width: 860px) {
@@ -324,8 +322,6 @@ main .students .grid .student .box img {
   width: 100%;
   height: 200px;
   margin-bottom: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 main .students .grid .student .box .info {
@@ -357,20 +353,13 @@ main .students .grid .student .box .info p {
   padding: 12px 18px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #373d3f;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 0;
-  font-weight: 300;
 }
 
 @media screen and (max-width: 640px) {
   main .students .grid .student .box .info p {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  main .students .grid .student .box .info p {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
@@ -442,55 +431,67 @@ footer .grid {
 }
 
 footer .grid .policy {
+  text-align: center;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  text-align: center;
-}
-
-footer .grid .policy a {
-  color: white;
-  margin-bottom: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-footer .grid .policy a:hover {
-  color: #009639;
 }
 
 @media screen and (max-width: 850px) {
-  footer .grid .policy a {
-    display: none;
+  footer .grid .policy {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 8px;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer .grid .policy {
+    width: 70%;
+  }
+}
+
+footer .grid .policy a {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+  footer .grid .policy a img {
+    width: 100%;
   }
 }
 
 footer .grid .logo {
   margin: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 @media screen and (max-width: 850px) {
   footer .grid .logo {
     text-align: center;
     width: 100%;
+    padding: 6px 0;
   }
 }
 
 footer .grid .logo img {
-  width: 100%;
+  width: 180px;
 }
 
 @media screen and (max-width: 850px) {
   footer .grid .logo img {
-    width: 75%;
+    width: 160px;
   }
 }
 
 footer .grid .copywrights {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -500,6 +501,7 @@ footer .grid .copywrights {
         -ms-grid-row-align: center;
         align-self: center;
     text-align: center;
+    padding: 0;
   }
 }
 
@@ -511,7 +513,6 @@ footer .grid .copywrights a {
   font-weight: 400;
   -webkit-transition: .3s;
   transition: .3s;
-  display: none;
 }
 
 footer .grid .copywrights a:hover {
@@ -521,7 +522,7 @@ footer .grid .copywrights a:hover {
 @media screen and (max-width: 850px) {
   footer .grid .copywrights a {
     display: block;
-    margin-top: 19px;
+    margin-top: 14px;
   }
 }
 
