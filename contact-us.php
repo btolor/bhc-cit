@@ -31,7 +31,9 @@
     #Display error message variables... 
     $subjectErr = "";
     $emailErr = "";
-    $nameErr = "";
+    $fNameErr = "";
+    $lNameErr = "";
+    $numberErr = "";
     $messageErr = "";
 
     /*
@@ -54,12 +56,12 @@
         Stores the value of the subject form field in a variable using the html 
         specialchars to avoid security issues and trim off the whitespaces...
         */
-        $subject = htmlspecialchars($_POST['subject']);
+        $subject = htmlspecialchars(trim($_POST['subject']));
         #If statement to see if name variable is empty... 
         if(empty($subject)){
             #If True:
             #stores an error message inside of the subject error message variable...
-            $subjectErr = "Plaese enter a subject!"
+            $subjectErr = "*Plaese enter a subject!"
             #Change the value of form validation key's value... 
             $vaild = false; 
         }
@@ -74,39 +76,67 @@
         if(!filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)){
             #If True:
             #stores an error message inside of the email error message variable...
-            $emailErr = "Plaese enter a valid email! e.g. johnsmith@email.com"
+            $emailErr = "*Invalid enter a valid email! e.g. johnsmith@email.com"
             #Change the value of form validation key's value... 
             $vaild = false; 
         }
         
-        #Name... 
+        #First-Name... 
         /*
-        Stores the value of the name form field in a variable using the html 
+        Stores the value of the fName form field in a variable using the html 
         specialchars to avoid security issues and trim off the whitespaces...
         */
-        $name = htmlspecialchars($_POST['name']);
-        #If statement to see if name variable is empty... 
-        if(empty($name)){
+        $fName = htmlspecialchars(trim($_POST['fName']));
+        #If statement to see if  variable is empty... 
+        if(empty($)){
             #If True:
-            #stores an error message inside of the name error message variable...
-            $nameErr = "Plaese enter a name!"
+            #stores an error message inside of the fName error message variable...
+            $fNameErr = "*Invalid!"
             #Change the value of form validation key's value... 
             $vaild = false; 
         }
+
+        #Last-Name... 
+        /*
+        Stores the value of the lName form field in a variable using the html 
+        specialchars to avoid security issues and trim off the whitespaces...
+        */
+        $lName = htmlspecialchars(trim($_POST['lName']));
+        #If statement to see if lname variable is empty... 
+        if(empty($lName)){
+            #If True:
+            #stores an error message inside of the lName error message variable...
+            $lNameErr = "*Invalid!"
+            #Change the value of form validation key's value... 
+            $vaild = false; 
+        }
+
+        #Number
+        // $number = htmlspecialchars(trim($_POST['number']));
+        // if(empty($number)){
+        //     $vaild = true;
+        // } elseif(){}
+
 
         #Message... 
         /*
         Stores the value of the message form field in a variable using the html 
         specialchars to avoid security issues and trim off the whitespaces...
         */
-        $message = htmlspecialchars($_POST['message']);
+        $message = htmlspecialchars(trim($_POST['message']));
         #If statement to see if message variable is empty... 
         if(empty($message)){
             #If True:
             #stores an error message inside of the name error message variable...
-            $messageErr = "Plaese enter a message!"
+            $messageErr = "*Plaese enter a message!"
             #Change the value of form validation key's value... 
             $vaild = false; 
+        }
+
+
+        if($vaild){
+            $newMessage = "insert into Messages values(default,$subject,$email,$fName,$lName,$number,$message)";
+            mysqli_query($connection,$newMessage) or die(mysqli_error($connection));
         }
 
     }else{
@@ -114,7 +144,9 @@
         #Sticky form field variables... 
         $subject = "";
         $email = "";
-        $name = "";
+        $fName = "";
+        $lName = "";
+        $number = "";
         $message = "";
     }
 
@@ -168,8 +200,16 @@
                         <span><?php echo $subjectErr;?></span>
                         <input type="email" name="email" id="email-input" placeholder="Email:" value="<?php echo $email;?>">
                         <span><?php echo $emailErr;?></span>
-                        <input type="text" name="name" id="name-input" placeholder="Name:" value="<?php echo $name;?>">
-                        <span><?php echo $nameErr;?></span>
+                        <input type="text" name="fName" id="fName-input" placeholder="First Name:" value="<?php echo $fName;?>">
+                        <span><?php echo $fNameErr;?></span>
+                        <input type="text" name="lName" id="lName-input" placeholder="Last Name:" value="<?php echo $lName;?>">
+                        <span><?php echo $lNameErr;?></span>
+                        
+                        
+                        <!-- <input type="text" name="" id="-input" placeholder="First Name:" value="<?php echo $;?>">
+                        <span><?php echo $Err;?></span> -->
+
+
                         <textarea name="message" id="message-input" cols="40" rows="6" placeholder="Message:"  value="<?php echo $message;?>"></textarea>
                         <span><?php echo $messageErr;?></span>
                         <input type="submit" name="submit" value="Submit" id="submit">
