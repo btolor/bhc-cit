@@ -10,117 +10,6 @@ $text-color: #373d3f
 // Fonts
 $text-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 
-/* Header Styles... */
-header 
-    position: relative
-    background: white
-    background-color: white
-    border-bottom: 2px solid green
-    .grid
-        padding: 20px 0 8px
-        +media-max(640px)
-            padding: 10px 0  4px
-        .logo-sec
-            display: flex
-            align-items: flex-end
-            img 
-                +media-max(640px)
-                    width: 200px
-                +media-max(400px)
-                    width: 180px
-        .menu-sec
-            +fullFlex(flex, row,space-between)
-            align-items: center
-            padding-left: 20px
-            padding-top: 14px
-            +media-max(860px)
-                display: none
-            a 
-                font-size: 20px
-                font-family: $text-font 
-                text-transform: uppercase
-                color: $dark-green
-                font-weight: 700
-                margin-bottom: 0
-                transition: .3s
-                &:hover
-                    color: $light-green
-        // Mobile menu open button...
-        .mobile-menu
-            display: none
-            justify-content: flex-end
-            align-items: center
-            padding-top: 8px
-            +media-max(860px)
-                display: flex
-            a 
-                font-size: 32px
-                color: $dark-green
-                font-weight: 700
-                margin-bottom: 0
-                .fa 
-                    border: 2px solid $dark-green
-                    border-radius: 4px
-                    padding: 2px 4px 
-                    transition: .3s
-                    &:hover
-                        border-color: $light-green
-                &:hover
-                    color: $light-green
-                +media-max(640px)
-                    font-size: 26px
-        // Mobile menu...
-        .mobile-links
-            width: 35%
-            height: 100vh
-            background: rgba(0, 0, 0, .9)
-            +flex(flex,column)
-            position: absolute
-            right: 0
-            top: 0
-            text-align: right
-            padding-top: 42px
-            padding-right: 15px
-            padding-left: 15px
-            transition: 1s
-            +media-max(700px)
-                padding-top: 37px
-            +media-max(640px)
-                width: 250px
-                padding-right: 10px
-                padding-top: 6%
-            +media-max(450px)
-                width: 200px
-            .close-btn
-                font-size: 32px
-                font-weight: 700
-                margin-bottom: 20px
-                .fa 
-                    border: 2px solid $light-green
-                    border-radius: 4px
-                    padding: 2px 4px 
-                    transition: .3s
-                    color: $light-green
-                    &:hover
-                        border-color: $dark-green
-                        color: $dark-green
-                +media-max(640px)
-                    font-size: 26px
-            .link
-                font-size: 20px
-                font-weight: 700
-                text-transform: uppercase
-                text-align: center
-                color: $light-green
-                padding: 12px 0
-                transition: .3s
-                +media-max(640px)
-                    font-size: 18px
-                &:hover
-                    color: $dark-green
-                    border-bottom: 1px solid $dark-green
-        .active
-            display: none
 /* Main Styles... */
 main 
     // Top Section...
@@ -175,6 +64,7 @@ main
                 .enroll 
                     +media-max(640px)
                         text-align: center
+                        margin-bottom: 20px
                     a
                         background: $dark-green
                         color: white
@@ -209,6 +99,8 @@ main
     // Slogan Section...
     .slogan 
         background: $dark-green
+        +media-max(640px)
+            margin-bottom: 40px
         .grid
             +center(70%, 0 auto)
             padding: 4% 0
@@ -265,26 +157,26 @@ main
                 -webkit-box-shadow: 0 8px 6px -6px $text-color
                 box-shadow: 0 8px 6px -6px $text-color
                 +media-max(1024px)
-                    margin-bottom: 28px
+                    margin-bottom: 50px
                 .title 
-                    background: $dark-green 
-                    border-bottom: 1px solid black
                     color: white
+                    background: $dark-green
+                    background-color: $dark-green
                     text-align: center
-                    padding: 14px 0
+                    padding: 14px 0 
+                    border-bottom: 1px solid black
                     h3
                         font-family: $text-font 
                         font-weight: 600
-                        margin-bottom: 0
-                        font-size: 22px
+                        margin-bottom: 4px
+                        font-size: 26px
                         +media-max(360px)
                             font-size: 20px
                         +media-max(330px)
                             font-size: 18px
                 .info 
                     text-align: center
-                    padding-top: 30px
-                    // padding-bottom: 40px
+                    padding-top: 20px
                     +flex(flex,column)
                     justify-content: space-between
                     img 
@@ -508,22 +400,27 @@ main
     .location
         .grid
             +fullFlex(flex,row,center) 
-            padding-bottom: 20px
+            padding-bottom: 60px
             .address 
                 +flex(flex,column)
                 align-self: center
+                justify-content: center
                 +media-max(640px)
                     padding: 20px 0 0
                 img 
                     width: 280px
                     margin: 0 auto
-                    padding-bottom: 16px
+                    padding-bottom: 20px
                     +media-max(904px)
                         width: 80%
                     +media-max(640px)
                         width: 60%
+                #name 
+                    text-align: center
+                    font-size: 20px
+                    color: $text-color
                 .street
-                    padding-bottom: 8px
+                    padding-bottom: 12px
                     +center(50%, 0 auto)
                     +media-max(1070px)
                         width: 60%
@@ -535,14 +432,14 @@ main
                         padding-bottom: 6px
                     a
                         color: $text-color
-                        +flex(flex,row) 
+                        +fullFlex(flex,row,center) 
                         +media-max(640px)
                             +center(fit-content, 0 auto)
                             padding-bottom: 6px
                             padding-top: 8px
                         .icon 
                             align-self: center
-                            padding-right: 20px
+                            padding-right: 12px
                             .fa 
                                 font-size: 28px  
                                 color: $dark-green
@@ -556,123 +453,31 @@ main
                                     font-size: 20px
                                 +media-max(760px)
                                     font-size: 16px
-                                // +media-max(640px)
-                                //     font-size: 16px
-                                    // ***
-                                    // ***
-                                    // *** 
-                .number
-                    +flex(flex,row)  
+                .info
                     +center(50%, 0 auto)
+                    text-align: center
                     +media-max(1070px)
                         width: 60%
                     +media-max(904px)
                         width: 80%
                     +media-max(760px)
-                        width: 85%
-                    +media-max(640px)
-                        justify-content: center
-                    .icon 
-                        align-self: center
-                        padding-right: 14px
+                        width: 85%   
+                    h4 
+                        font-size: 18px 
+                        color: $text-color   
+                        margin-bottom: 12px
                         .fa 
-                            font-size: 28px  
-                            color: $dark-green
-                            +media-max(904px)
-                                font-size: 30px
-                    .content
-                        p 
-                            margin-bottom: 0  
-                            color: $text-color
-                            font-size: 18px 
-                            +media-max(904px)
-                                font-size: 20px
-                            +media-max(760px)
-                                font-size: 16px
-                            // +media-max(640px)
-                            //     font-size:                  
+                            font-size: 22px  
+                            padding-right: 12px  
+                            color: $dark-green   
+                        a 
+                            color: $text-color     
             .map
+                align-self: center
                 +media-max(640px)
                     text-align: center
-                    padding: 26px 0
+                    // padding: 26px 0
                 img 
-                    width: 500px
-                    height: 300px
-                    border: 1px solid $dark-green
-                    border-radius: 10px
-                    +media-max(1100px)
-                        width: 480px
-                    +media-max(1024px)
-                        width: 400px
-                        height: 270px
-                    +media-max(760px)
-                        width: 340px
-                        height: 240px
-/* Footer Styles... */
-footer
-    background: black
-    .grid
-        padding: 16px 0 18px
-        +fullFlex(flex,row,space-between)
-        +center(95%, 0 auto)
-        +media-max(850px)
-            +fullFlex(flex,column, center)
-        .policy
-            text-align: center
-            align-self: flex-end
-            +media-max(850px)
-                align-self: center
-                padding-top: 8px
-                +center(60%,0 auto)
-            +media-max(500px)
-                width: 70%
-            a 
-                margin-bottom: 0
-                img 
-                    +media-max(850px)
-                        width: 100%
-        .logo
-            margin: 0
-            align-self: flex-end
-            +media-max(850px)
-                text-align: center
-                width: 100%
-                padding: 6px 0
-            img 
-                width: 180px
-                +media-max(850px)
-                    width: 160px
-        .copywrights
-            align-self: center
-            padding-top: 20px
-            text-align: center
-            +media-max(850px)
-                align-self: center
-                text-align: center
-                padding: 0
-            a 
-                color: white
-                margin-bottom: 0
-                font-family: $text-font
-                font-size: 14px
-                font-weight: 400
-                transition: .3s
-                // display: none
-                &:hover
-                    color: $dark-green
-                +media-max(850px)
-                    display: block
-                    margin-top: 14px
-                +media-max(700px)
-                    font-size: 12px
-            p 
-                color: white
-                margin-bottom: 0
-                font-family: $text-font
-                font-size: 14px
-                font-weight: 400
-                +media-max(850px)
-                    margin-top: 10px
-                +media-max(700px)
-                    font-size: 12px
-
+                    width: 100%
+                    +media-max(640px)
+                        width: 95%
