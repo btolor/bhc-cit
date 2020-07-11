@@ -1,225 +1,5 @@
 /* Import the mixins collection file... */
 /* Variables... */
-/* Header Styles... */
-header {
-  position: relative;
-  background: white;
-  background-color: white;
-  border-bottom: 2px solid green;
-}
-
-header .grid {
-  padding: 20px 0 8px;
-}
-
-@media screen and (max-width: 640px) {
-  header .grid {
-    padding: 10px 0  4px;
-  }
-}
-
-header .grid .logo-sec {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-@media screen and (max-width: 640px) {
-  header .grid .logo-sec img {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  header .grid .logo-sec img {
-    width: 180px;
-  }
-}
-
-header .grid .menu-sec {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 20px;
-  padding-top: 14px;
-}
-
-@media screen and (max-width: 860px) {
-  header .grid .menu-sec {
-    display: none;
-  }
-}
-
-header .grid .menu-sec a {
-  font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
-  color: #009639;
-  font-weight: 700;
-  margin-bottom: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-header .grid .menu-sec a:hover {
-  color: #97D700;
-}
-
-header .grid .mobile-menu {
-  display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 8px;
-}
-
-@media screen and (max-width: 860px) {
-  header .grid .mobile-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-header .grid .mobile-menu a {
-  font-size: 32px;
-  color: #009639;
-  font-weight: 700;
-  margin-bottom: 0;
-}
-
-header .grid .mobile-menu a .fa {
-  border: 2px solid #009639;
-  border-radius: 4px;
-  padding: 2px 4px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-header .grid .mobile-menu a .fa:hover {
-  border-color: #97D700;
-}
-
-header .grid .mobile-menu a:hover {
-  color: #97D700;
-}
-
-@media screen and (max-width: 640px) {
-  header .grid .mobile-menu a {
-    font-size: 26px;
-  }
-}
-
-header .grid .mobile-links {
-  width: 35%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-align: right;
-  padding-top: 42px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-@media screen and (max-width: 700px) {
-  header .grid .mobile-links {
-    padding-top: 37px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  header .grid .mobile-links {
-    width: 250px;
-    padding-right: 10px;
-    padding-top: 6%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  header .grid .mobile-links {
-    width: 200px;
-  }
-}
-
-header .grid .mobile-links .close-btn {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-header .grid .mobile-links .close-btn .fa {
-  border: 2px solid #97D700;
-  border-radius: 4px;
-  padding: 2px 4px;
-  -webkit-transition: .3s;
-  transition: .3s;
-  color: #97D700;
-}
-
-header .grid .mobile-links .close-btn .fa:hover {
-  border-color: #009639;
-  color: #009639;
-}
-
-@media screen and (max-width: 640px) {
-  header .grid .mobile-links .close-btn {
-    font-size: 26px;
-  }
-}
-
-header .grid .mobile-links .link {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  color: #97D700;
-  padding: 12px 0;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-@media screen and (max-width: 640px) {
-  header .grid .mobile-links .link {
-    font-size: 18px;
-  }
-}
-
-header .grid .mobile-links .link:hover {
-  color: #009639;
-  border-bottom: 1px solid #009639;
-}
-
-header .grid .active {
-  display: none;
-}
-
 /* Main Styles... */
 main .top .grid {
   padding: 40px 0 70px;
@@ -341,6 +121,7 @@ main .top .grid .promise p {
 @media screen and (max-width: 640px) {
   main .top .grid .promise .enroll {
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -412,6 +193,12 @@ main .top .grid .promise-img img {
 
 main .slogan {
   background: #009639;
+}
+
+@media screen and (max-width: 640px) {
+  main .slogan {
+    margin-bottom: 40px;
+  }
 }
 
 main .slogan .grid {
@@ -542,23 +329,24 @@ main .bottom .grid .card {
 
 @media screen and (max-width: 1024px) {
   main .bottom .grid .card {
-    margin-bottom: 28px;
+    margin-bottom: 50px;
   }
 }
 
 main .bottom .grid .card .title {
-  background: #009639;
-  border-bottom: 1px solid black;
   color: white;
+  background: #009639;
+  background-color: #009639;
   text-align: center;
   padding: 14px 0;
+  border-bottom: 1px solid black;
 }
 
 main .bottom .grid .card .title h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-  margin-bottom: 0;
-  font-size: 22px;
+  margin-bottom: 4px;
+  font-size: 26px;
 }
 
 @media screen and (max-width: 360px) {
@@ -575,7 +363,7 @@ main .bottom .grid .card .title h3 {
 
 main .bottom .grid .card .info {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -989,7 +777,7 @@ main .location .grid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
 }
 
 main .location .grid .address {
@@ -1002,6 +790,9 @@ main .location .grid .address {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 640px) {
@@ -1013,7 +804,7 @@ main .location .grid .address {
 main .location .grid .address img {
   width: 280px;
   margin: 0 auto;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 904px) {
@@ -1028,8 +819,14 @@ main .location .grid .address img {
   }
 }
 
+main .location .grid .address #name {
+  text-align: center;
+  font-size: 20px;
+  color: #373d3f;
+}
+
 main .location .grid .address .street {
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   width: 50%;
   margin: 0 auto;
 }
@@ -1063,6 +860,9 @@ main .location .grid .address .street a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 640px) {
@@ -1080,7 +880,7 @@ main .location .grid .address .street a .icon {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding-right: 20px;
+  padding-right: 12px;
 }
 
 main .location .grid .address .street a .icon .fa {
@@ -1111,269 +911,65 @@ main .location .grid .address .street a .content p {
   }
 }
 
-main .location .grid .address .number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+main .location .grid .address .info {
   width: 50%;
   margin: 0 auto;
+  text-align: center;
 }
 
 @media screen and (max-width: 1070px) {
-  main .location .grid .address .number {
+  main .location .grid .address .info {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 904px) {
-  main .location .grid .address .number {
+  main .location .grid .address .info {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 760px) {
-  main .location .grid .address .number {
+  main .location .grid .address .info {
     width: 85%;
   }
 }
 
-@media screen and (max-width: 640px) {
-  main .location .grid .address .number {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+main .location .grid .address .info h4 {
+  font-size: 18px;
+  color: #373d3f;
+  margin-bottom: 12px;
 }
 
-main .location .grid .address .number .icon {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-right: 14px;
-}
-
-main .location .grid .address .number .icon .fa {
-  font-size: 28px;
+main .location .grid .address .info h4 .fa {
+  font-size: 22px;
+  padding-right: 12px;
   color: #009639;
 }
 
-@media screen and (max-width: 904px) {
-  main .location .grid .address .number .icon .fa {
-    font-size: 30px;
-  }
-}
-
-main .location .grid .address .number .content p {
-  margin-bottom: 0;
+main .location .grid .address .info h4 a {
   color: #373d3f;
-  font-size: 18px;
 }
 
-@media screen and (max-width: 904px) {
-  main .location .grid .address .number .content p {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  main .location .grid .address .number .content p {
-    font-size: 16px;
-  }
+main .location .grid .map {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media screen and (max-width: 640px) {
   main .location .grid .map {
     text-align: center;
-    padding: 26px 0;
   }
 }
 
 main .location .grid .map img {
-  width: 500px;
-  height: 300px;
-  border: 1px solid #009639;
-  border-radius: 10px;
+  width: 100%;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 640px) {
   main .location .grid .map img {
-    width: 480px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  main .location .grid .map img {
-    width: 400px;
-    height: 270px;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  main .location .grid .map img {
-    width: 340px;
-    height: 240px;
-  }
-}
-
-/* Footer Styles... */
-footer {
-  background: black;
-}
-
-footer .grid {
-  padding: 16px 0 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 95%;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-footer .grid .policy {
-  text-align: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .policy {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-top: 8px;
-    width: 60%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  footer .grid .policy {
-    width: 70%;
-  }
-}
-
-footer .grid .policy a {
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .policy a img {
-    width: 100%;
-  }
-}
-
-footer .grid .logo {
-  margin: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .logo {
-    text-align: center;
-    width: 100%;
-    padding: 6px 0;
-  }
-}
-
-footer .grid .logo img {
-  width: 180px;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .logo img {
-    width: 160px;
-  }
-}
-
-footer .grid .copywrights {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-top: 20px;
-  text-align: center;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .copywrights {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    text-align: center;
-    padding: 0;
-  }
-}
-
-footer .grid .copywrights a {
-  color: white;
-  margin-bottom: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-footer .grid .copywrights a:hover {
-  color: #009639;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .copywrights a {
-    display: block;
-    margin-top: 14px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  footer .grid .copywrights a {
-    font-size: 12px;
-  }
-}
-
-footer .grid .copywrights p {
-  color: white;
-  margin-bottom: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-@media screen and (max-width: 850px) {
-  footer .grid .copywrights p {
-    margin-top: 10px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  footer .grid .copywrights p {
-    font-size: 12px;
+    width: 95%;
   }
 }
 /*# sourceMappingURL=main.css.map */
