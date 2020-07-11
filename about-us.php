@@ -1,7 +1,7 @@
 <!-- Start of head & header php code -->
 <?php 
     #Adds the php functions file to the document... 
-    require_once "assets/php/functions.php";
+    require_once "functions.php";
     #Initializes and sets the title string variable...
     $title = "The Brookhaven CIT Department About Us";
     /*
@@ -31,7 +31,7 @@
                 <div class="cell small-12 medium-6 large-6 brandon student">
                     <!-- start of box -->
                     <div class="box">
-                        <img src="assets/images/Joshua Kidd - Bio - Photo.jpg" alt="This is an image of Brandon Tolor.">
+                        <img src="assets/images/Brandon Tolor - Bio Photo.png" alt="This is an image of Brandon Tolor.">
                         <!-- start of info -->
                         <div class="info">
                             <!-- start of title -->
@@ -57,9 +57,9 @@
                             
                             <!-- start of social-links -->
                             <div class="social-links">
-                                <a href="#/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                <a href="#/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                                <a href="#/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/brandon.tolor" target="_blank"  aria-label="https://www.facebook.com/brandon.tolor" rel="noopener"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/Tolor_Boy" target="_blank" aria-label="https://twitter.com/Tolor_Boy" rel="noopener"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/in/brandon-tolor-343098106/" target="_blank" aria-label="https://www.linkedin.com/in/brandon-tolor-343098106/" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                             </div>
                             <!-- end of social-links -->
                         </div>
@@ -72,7 +72,7 @@
                 <div class="cell small-12 medium-6 large-6 joshua student">
                     <!-- start of box -->
                     <div class="box">
-                        <img src="assets/images/Joshua Kidd-Bio-Photo.jpg" alt="This is an image of Joshua Kidd.">
+                        <img src="assets/images/Joshua Kidd - Bio Photo.png" alt="This is an image of Joshua Kidd.">
                         <!-- start of info -->
                         <div class="info">
                             <!-- start of title -->
@@ -94,9 +94,8 @@
                             </p>
                             <!-- start of social-links -->
                             <div class="social-links">
-                                <a href="#/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                                <a href="#/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                                <a href="#/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/joshuamkidd" target="_blank" aria-label="https://www.facebook.com/joshuamkidd" rel="noopener"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/in/joshuamkidd/" target="_blank" aria-label="https://www.linkedin.com/in/joshuamkidd/" rel="noopener"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                             </div>
                             <!-- end of social-links -->
                         </div>

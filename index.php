@@ -1,7 +1,7 @@
 <!-- Start of head & header php code -->
 <?php 
     #Adds the php functions file to the document... 
-    require_once "assets/php/functions.php";
+    require_once "functions.php";
     #Initializes and sets the title string variable...
     $title = "The Brookhaven CIT Department";
     /*
@@ -30,7 +30,7 @@
                     <!-- start of enroll -->
                     <div class="enroll">
                         <a href="https://www.brookhavencollege.edu/apply-reg/apply/pages/default.aspx"
-                            target="_blank">enroll now</a>
+                            target="_blank" aria-label="https://www.brookhavencollege.edu/apply-reg/apply/pages/default.aspx" rel="noopener">enroll now</a>
                     </div>
                     <!-- end of enroll -->
 
@@ -78,12 +78,12 @@
                 <div class="cell small-12 medium-12 large-4 cit card">
                     <!-- start of title -->
                     <div class="title">
-                        <h3>CIT Programs Info:</h3>
+                        <h3>CIT Programs</h3>
                     </div>
                     <!-- end of title -->
                     <!-- start of info -->
                     <div class="info">
-                        <img src="assets/images/adult-apple-device-business-code-340152.jpg"
+                        <img src="assets/images/programming-student.jpg"
                             alt="This is an image for the CIT programs information card.">
 
                         <h6>Programming Languages</h6>
@@ -94,7 +94,7 @@
                             languages that are currently in high demand, such as:
                         </p>
 
-                        <a href="#/" class="list">
+                        <a href="https://www.brookhavencollege.edu/cd/credit/information-technology/pages/guided-pathways.aspx" target="_blank" aria-label="https://www.brookhavencollege.edu/cd/credit/information-technology/pages/guided-pathways.aspx" rel="noopener" class="list">
                             <ul>
                                 <li>ASP.NET</li>
                                 <li>CSS3</li>
@@ -111,7 +111,7 @@
                             the following fields of study:
                         </p>
 
-                        <a href="#/" class="list">
+                        <a href="https://www.brookhavencollege.edu/cd/credit/information-technology/pages/degrees-cert.aspx" target="_blank" aria-label="https://www.brookhavencollege.edu/cd/credit/information-technology/pages/degrees-cert.aspx" rel="noopener" class="list">
                             <ul>
                                 <li>Computer Science</li>
                                 <li>Gaming</li>
@@ -124,7 +124,7 @@
                             </ul>
                         </a>
 
-                        <a href="#/" class="btn" target="_blank">more info</a>
+                        <a href="https://www.brookhavencollege.edu/cd/credit/information-technology/pages/default.aspx" class="btn" target="_blank" aria-label="https://www.brookhavencollege.edu/cd/credit/information-technology/pages/default.aspx" rel="noopener">more info</a>
                     </div>
                     <!-- end of info -->
                 </div>
@@ -134,12 +134,12 @@
                 <div class="cell small-12 medium-12 large-4 cit card">
                     <!-- start of title -->
                     <div class="title">
-                        <h3>Brookhaven College Info:</h3>
+                        <h3>Brookhaven College</h3>
                     </div>
                     <!-- end of title -->
                     <!-- start of info -->
                     <div class="info">
-                        <img src="assets/images/bldgssign-w.jpg"
+                        <img src="assets/images/brookhaven-college.jpg"
                             alt="This is an image for the CIT programs information card.">
                         <h6>Who We Are</h6>
                         <p>
@@ -161,7 +161,7 @@
                             instructors are here to ensure that you obtain skills that are needed to be
                             successful in your field of study.
                         </p>
-                        <a href="#/" class="btn bhc-btn" target="_blank">more info</a>
+                        <a href="https://www.brookhavencollege.edu/pages/default.aspx" class="btn bhc-btn" target="_blank" aria-label="https://www.brookhavencollege.edu/pages/default.aspx" rel="noopener">more info</a>
                     </div>
                     <!-- end of info -->
                 </div>
@@ -173,12 +173,12 @@
                 <div class="cell small-12 medium-12 large-4 stats card">
                     <!-- start of title -->
                     <div class="title">
-                        <h3>Bureau of Labor Statistics Info:</h3>
+                        <h3>Careers</h3>
                     </div>
                     <!-- end of title -->
                     <!-- start of info -->
                     <div class="info">
-                        <img src="assets/images/person-holding-blue-ballpoint-pen-on-white-notebook-669610.jpg"
+                        <img src="assets/images/labor-statistics.jpg"
                             alt="This is an image for the CIT programs information card.">
                         <h6>Job Outlook</h6>
 
@@ -199,7 +199,7 @@
 
 
                         <a href="https://www.careeronestop.org/Toolkit/Wages/find-salary.aspx?keyword=Web%20Developers&soccode=151134&location=Dallas,%20TX"
-                            target="_blank" class="graph-link">
+                            target="_blank" aria-label="https://www.careeronestop.org/Toolkit/Wages/find-salary.aspx?keyword=Web%20Developers&soccode=151134&location=Dallas,%20TX" rel="noopener" class="graph-link">
                             <h6>Wages for Web Developers</h6>
                             <!-- start of graph -->
                             <div class="graph">
@@ -282,12 +282,8 @@
                             <!-- end of graph -->
                         </a>
 
-
-
-
-
                         <a href="https://www.bls.gov/OOH/computer-and-information-technology/web-developers.htm#tab-6"
-                            class="btn" target="_blank">more info</a>
+                            class="btn" target="_blank" aria-label="https://www.bls.gov/OOH/computer-and-information-technology/web-developers.htm#tab-6" rel="noopener">more info</a>
                     </div>
                     <!-- end of info -->
                 </div>
@@ -312,10 +308,11 @@
                 <div class="cell small-12 medium-6 large-6 address">
                     <img src="assets/images/BHC-vertical-RGB.png"
                         alt="This is an image of the footer's Brookhaven College verticle logo.">
+                    <h4 id="name">Professor Stephen Herd</h4>
                     <!-- start of street -->
                     <div class="street">
                         <a href="https://www.google.com/maps/place/Brookhaven+College/@32.9293813,-96.8520996,17z/data=!3m1!4b1!4m5!3m4!1s0x864c272414eacf6f:0x2e46190b48ff20c!8m2!3d32.9293568!4d-96.8500684"
-                            target="_blank">
+                            target="_blank" aria-label="https://www.google.com/maps/place/Brookhaven+College/@32.9293813,-96.8520996,17z/data=!3m1!4b1!4m5!3m4!1s0x864c272414eacf6f:0x2e46190b48ff20c!8m2!3d32.9293568!4d-96.8500684" rel="noopener">
                             <!-- start of icon -->
                             <div class="icon">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -330,29 +327,28 @@
                         </a>
                     </div>
                     <!-- end of street -->
-                    <!-- start of number -->
-                    <div class="number">
-                        <!-- start of icon -->
-                        <div class="icon">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                        </div>
-                        <!-- end of icon -->
-                        <!-- start of content -->
-                        <div class="content">
-                            <p>Phone: 972-860-4700</p>
-                        </div>
-                        <!-- end of content -->
+                     <!-- start of info -->
+                     <div class="info">
+                        <!-- <h4 id="name">Professor Stephen Herd</h4> -->
+                        <h4 id="office"><i class="fa fa-building" aria-hidden="true"></i>Bldg K, Room K104</h4>
+                        <h4 id=""email><a href="mailto:sherd@dcccd.edu" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i>sherd@dcccd.edu</a></h4>
+                        <h4 id=""number><i class="fa fa-phone" aria-hidden="true"></i>972.860.4329</h4>
+                        <!-- <h4 id=""number><i class="fa fa-phone-square" aria-hidden="true"></i>: 972.860.4329 </h4> -->
                     </div>
-                    <!-- end of number -->
+                    <!-- end of info -->
                 </div>
                 <!-- end of address -->
 
                 <!-- start of map -->
                 <div class="cell small-12 medium-6 large-6 map">
-                    <a href="/assets/images/bhc-campus-map.png" target="_blank" download="">
-                        <img src="assets/images/bhc-campus-map.png"
+                    <a href="https://www.brookhavencollege.edu/maps/pages/default.aspx" target="_blank">
+                        <img src="assets/images/BHC-campus-map.png"
                             alt="This is an image of the Brookhaven College campus map and buildings.">
                     </a>
+                    <!-- <a href="https://www.google.com/maps/place/Brookhaven+College/@32.9295613,-96.8553309,15.75z/data=!4m5!3m4!1s0x864c272414eacf6f:0x2e46190b48ff20c!8m2!3d32.9293568!4d-96.8500684" target="_blank"
+                    aria-label="https://www.google.com/maps/place/Brookhaven+College/@32.9295613,-96.8553309,15.75z/data=!4m5!3m4!1s0x864c272414eacf6f:0x2e46190b48ff20c!8m2!3d32.9293568!4d-96.8500684" rel="noopener">
+                        <img src="assets/images/BHC-street-map.png" alt="This is an image of a map view of the Brookhaven College location.">
+                    </a> -->
                 </div>
                 <!-- end of map -->
 
@@ -362,8 +358,17 @@
         <!-- end of container -->
     </section>
     <!-- end of location-section -->
+    <!-- start of contact-section -->
+    <section class="contact-info">
+        <!-- start of container -->
+        <div class="grid-container">
+            
+        </div>
+        <!-- end of container -->
+    </section>
+    <!-- end of contact-section -->
 </main>
 <!-- end of main -->
 <!-- Start of footer php code -->
-<?php writeFoot();?>
+<?php writeFoot(); ?>
 <!-- End of footer php code -->

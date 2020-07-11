@@ -1,7 +1,7 @@
 <!-- Start of head & header php code -->
 <?php 
     #Adds the php functions file to the document... 
-    require_once "assets/php/functions.php";
+    require_once "functions.php";
     #Initializes and sets the title string variable...
     $title = "The Brookhaven CIT Department Contact Us";
 
@@ -10,12 +10,6 @@
 
     #Database connection error message variable...
     $connectionError = "";
-
-    #Database query results variable...
-    $data = "";
-
-    #Email address validation RegEx... 
-    $emailRegEx = '/[-\w.]+@([A-z0-9]+\.)+[A-z]{2,4}/';
 
     #If/Else statement to check if the database connection worked... 
     if(!$connection){
@@ -33,7 +27,6 @@
     $emailErr = "";
     $fNameErr = "";
     $lNameErr = "";
-    $numberErr = "";
     $messageErr = "";
 
     /*
@@ -43,13 +36,11 @@
     writeHead($title); 
 
 
-
-
     #If/Else statement to check if the page's form has been submitted... 
     if(isset($_POST['submit'])){
         #If True: 
         #Form validation key... 
-        $vaild = true; 
+        $valid = true; 
 
         #Subject... 
         /*
@@ -61,9 +52,9 @@
         if(empty($subject)){
             #If True:
             #stores an error message inside of the subject error message variable...
-            $subjectErr = "*Plaese enter a subject!"
+            $subjectErr = "*Plaese enter a subject!";
             #Change the value of form validation key's value... 
-            $vaild = false; 
+            $valid = false; 
         }
 
         #Email... 
@@ -76,9 +67,9 @@
         if(!filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)){
             #If True:
             #stores an error message inside of the email error message variable...
-            $emailErr = "*Invalid enter a valid email! e.g. johnsmith@email.com"
+            $emailErr = "*Invalid enter a valid email! e.g. johnsmith@email.com";
             #Change the value of form validation key's value... 
-            $vaild = false; 
+            $valid = false; 
         }
         
         #First-Name... 
@@ -88,12 +79,12 @@
         */
         $fName = htmlspecialchars(trim($_POST['fName']));
         #If statement to see if  variable is empty... 
-        if(empty($)){
+        if(empty($fName)){
             #If True:
             #stores an error message inside of the fName error message variable...
-            $fNameErr = "*Invalid!"
+            $fNameErr = "*Invalid!";
             #Change the value of form validation key's value... 
-            $vaild = false; 
+            $valid = false; 
         }
 
         #Last-Name... 
@@ -106,18 +97,18 @@
         if(empty($lName)){
             #If True:
             #stores an error message inside of the lName error message variable...
-            $lNameErr = "*Invalid!"
+            $lNameErr = "*Invalid!";
             #Change the value of form validation key's value... 
-            $vaild = false; 
+            $valid = false; 
         }
 
         #Number
-        // $number = htmlspecialchars(trim($_POST['number']));
-        // if(empty($number)){
-        //     $vaild = true;
-        // } elseif(){}
-
-
+        /*
+        Stores the value of the phone number form field in a variable using the html 
+        specialchars to avoid security issues and trim off the whitespaces...
+        */
+        $number = htmlspecialchars(trim($_POST['number']));
+        
         #Message... 
         /*
         Stores the value of the message form field in a variable using the html 
@@ -128,17 +119,27 @@
         if(empty($message)){
             #If True:
             #stores an error message inside of the name error message variable...
-            $messageErr = "*Plaese enter a message!"
+            $messageErr = "*Plaese enter a message!";
             #Change the value of form validation key's value... 
-            $vaild = false; 
+            $valid = false; 
         }
 
-
-        if($vaild){
-            $newMessage = "insert into Messages values(default,$subject,$email,$fName,$lName,$number,$message)";
+        #If statement to check the value of the validation varisable for the contact form... 
+        if($valid){
+            #Initializes and sets the name variable with the value of the first and last name... 
+            $name = $fName." ".$lName;
+            #Stores a sql statement to insert data into the contact_us database...
+            $newMessage = "insert into contact_us values(default,'$name','$number','$email','$subject','$message',default)";
+            #Runs a sql query to the specified database with the specified sql statement...
             mysqli_query($connection,$newMessage) or die(mysqli_error($connection));
+            #Clears the form field values when the contact fornm has successfully been submitted...
+            $subject = "";
+            $email = "";
+            $fName = "";
+            $lName = "";
+            $number = "";
+            $message = "";
         }
-
     }else{
         #If False:
         #Sticky form field variables... 
@@ -149,7 +150,6 @@
         $number = "";
         $message = "";
     }
-
 ?>
 
 <!-- start of main -->
@@ -186,8 +186,9 @@
                         <h4 id=""number><i class="fa fa-phone-square" aria-hidden="true"></i>: 972.860.4329 </h4>
                     </div>
                     <!-- end of info -->
-                    <a href="#/">
-                        <img src="assets/images/Screenshot 2020-04-24 at 3.56.50 AM.png" alt="">
+                    <a href="https://www.google.com/maps/place/Brookhaven+College/@32.9295613,-96.8553309,15.75z/data=!4m5!3m4!1s0x864c272414eacf6f:0x2e46190b48ff20c!8m2!3d32.9293568!4d-96.8500684" target="_blank"
+                    aria-label="https://www.google.com/maps/place/Brookhaven+College/@32.9295613,-96.8553309,15.75z/data=!4m5!3m4!1s0x864c272414eacf6f:0x2e46190b48ff20c!8m2!3d32.9293568!4d-96.8500684" rel="noopener">
+                        <img src="assets/images/BHC-street-map.png" alt="This is an image of a map view of the Brookhaven College location.">
                     </a>
                 </div>
                 <!-- end of info-box -->
@@ -195,23 +196,24 @@
                 <div class="cell small-12 medium-6 large-5 form-box">
                     <h3 class="text-center">leave a message:</h3>
                     <!-- start of form -->
-                    <form action="contact-us.html" method="post">
+                    <form action="contact-us.php" method="post">
+                        <label for="subject-input">Subject</label>
                         <input type="text" name="subject" id="subject-input" placeholder="Subject:" value="<?php echo $subject;?>">
                         <span><?php echo $subjectErr;?></span>
+                        <label for="email-input">Email</label>
                         <input type="email" name="email" id="email-input" placeholder="Email:" value="<?php echo $email;?>">
                         <span><?php echo $emailErr;?></span>
+                        <label for="fName-input">First Name</label>
                         <input type="text" name="fName" id="fName-input" placeholder="First Name:" value="<?php echo $fName;?>">
                         <span><?php echo $fNameErr;?></span>
+                        <label for="lName-input">Last Name</label>
                         <input type="text" name="lName" id="lName-input" placeholder="Last Name:" value="<?php echo $lName;?>">
                         <span><?php echo $lNameErr;?></span>
-                        
-                        
-                        <!-- <input type="text" name="" id="-input" placeholder="First Name:" value="<?php echo $;?>">
-                        <span><?php echo $Err;?></span> -->
-
-
+                        <label for="number-input">Phone Number</label>
+                        <input type="tel" name="number" id="number-input" placeholder="Phone:" value="<?php echo $number;?>">
+                        <label for="message-input">Message</label>
                         <textarea name="message" id="message-input" cols="40" rows="6" placeholder="Message:"  value="<?php echo $message;?>"></textarea>
-                        <span><?php echo $messageErr;?></span>
+                        <span><?php echo $messageErr;?></span><br>
                         <input type="submit" name="submit" value="Submit" id="submit">
                     </form>
                     <!-- end of form -->
